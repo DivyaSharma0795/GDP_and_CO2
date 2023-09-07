@@ -1,9 +1,12 @@
+#   Importing Packages
 import pandas as pd
 
+#   Reading Data
 data = pd.read_csv(
     "https://media.githubusercontent.com/media/nickeubank/MIDS_Data/master/World_Development_Indicators/wdi_small_tidy_2015.csv"
 )
-# print(data.head())
+
+# Subsetting data
 new_df = data[
     [
         "Mortality rate, infant (per 1,000 live births)",
@@ -11,4 +14,6 @@ new_df = data[
         "Country Name",
     ]
 ]
+
+#   Viewing new data
 print(new_df)
